@@ -12,6 +12,50 @@ View docker status
 docker info
 ```
 
+## Images
+
+View the images that are in the local environment
+
+```bash
+docker image ls
+
+docker images
+```
+
+Bring an image from a repository to the local environment
+
+```bash
+docker pull <image name>:<version>
+```
+
+Publish an image to the repository
+
+```bash
+docker push <repository name>/<software name>:<software version>
+```
+
+Build an image
+
+```bash
+docker build -t <repository name>/<software name>:<software version> .
+```
+
+Change the tag of an image
+
+```bash
+docker tag <current tag> <new tag>
+```
+
+Build history of an image
+
+```bash
+docker history <image name>
+
+docker history -H <image name>
+```
+
+## Containers
+
 Run a container
 
 ```bash
@@ -186,44 +230,6 @@ Copy files from container to machine
 docker cp <container id>:<path into container> <file path>
 
 docker cp <container name>:<path into container> <file path> 
-```
-
-View the images that are in the local environment
-
-```bash
-docker image ls
-
-docker images
-```
-
-Bring an image from a repository to the local environment
-
-```bash
-docker pull <image name>:<version>
-```
-
-Publish an image to the repository
-
-```bash
-docker push <repository name>/<software name>:<software version>
-```
-
-Build an image
-
-```bash
-docker build -t <repository name>/<software name>:<software version> .
-```
-
-Change the tag of an image
-
-```bash
-docker tag <current tag> <new tag>
-```
-
-Build history of an image
-
-```bash
-docker history <image name>
 ```
 
 Show network interfaces
